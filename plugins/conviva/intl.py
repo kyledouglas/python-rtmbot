@@ -1,3 +1,13 @@
+import requests
+import json
+import sys
+import pymysql
+import csv
+import base64
+import re
+from datetime import datetime
+from pprint import pprint
+from Crypto.Cipher import XOR
 from __future__ import unicode_literals
 from client import slack_client as sc
 
@@ -9,16 +19,6 @@ def process_message(data):
     if 'bot intl top 10' in data['text']:
 
         print('Someday that will happen')
-        import requests
-        import json
-        import sys
-        import pymysql
-        import csv
-        import base64
-        import re
-        from datetime import datetime
-        from pprint import pprint
-        from Crypto.Cipher import XOR
 
         url = "https://api.conviva.com/insights/2/metrics.json"
 
